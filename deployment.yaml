@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complete-prodcution-end-to-end-deployment
+  labels:
+    app: complete-prodcution-end-to-end-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: complete-prodcution-end-to-end-app
+  template:
+    metadata:
+      labels:
+        app: complete-prodcution-end-to-end-app
+    spec:
+      containers:
+      - name: complete-prodcution-end-to-end-app
+        image: 6554932/complete-prodcution-end-to-end-pipeline:1.0.0-5
+        resources:
+          limits:
+            memory: "250Mi"
+            cpu: "500n"
+        ports:
+        - containerPort: 8080
