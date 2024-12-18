@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: complete-prodcution-end-to-end-app
-        image: 6554932/complete-prodcution-end-to-end-pipeline:1.0.0-5
+        image: 6554932/complete-prodcution-end-to-end-pipeline:1.0.0-14
         resources:
           limits:
             memory: "250Mi"
